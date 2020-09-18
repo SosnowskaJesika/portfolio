@@ -1,0 +1,56 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+    const nav = document.querySelector('nav');
+    const pText = document.querySelector('.div-soon p');
+    const text = [...'Kolejne projekty już wkrótce'];
+    const dot = '.';
+    const mobileMenuIcon = document.querySelector('i.fas.fa-bars');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            nav.style.height = 14 + 'vh';
+        } else {
+            nav.style.height = 0;
+        }
+    })
+
+    if (location.pathname === "/my-projects.html") {
+        let indexArray = 0;
+
+        const addDots = () => {
+
+            const addDot = () => {
+                let j = 0;
+                pText.textContent += dot;
+                j++;
+
+                if ([...pText.innerText].length === text.length + 4) {
+                    pText.textContent = '';
+                    let i = 0;
+                    while (i < text.length) {
+                        pText.textContent += text[i];
+                        i++;
+                    }
+                }
+            }
+            const indexDots = setInterval(addDot, 250);
+        }
+
+        const addLetter = () => {
+            pText.textContent += text[indexArray];
+            indexArray++;
+            if (indexArray === text.length) {
+                clearInterval(indexTyping);
+                setTimeout(addDots, 100);
+            }
+        }
+        const indexTyping = setInterval(addLetter, 100);
+    }
+
+    const openMobileMenu = () => {
+        console.log('open')
+    }
+
+    mobileMenuIcon.addEventListener('click', openMobileMenu)
+
+})

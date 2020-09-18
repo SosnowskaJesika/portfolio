@@ -1,0 +1,476 @@
+* 
+    margin: 0
+    padding: 0
+    font-family: Arial, Helvetica, serif
+
+body 
+    $first-color: #F1E6E7
+    $second-color: #465973
+
+    header 
+        background-color: $second-color
+        height: 14vh
+        position: relative
+        z-index: 3
+
+        nav 
+            position: fixed
+            width: 100vw
+            background-color: #465973b5
+
+            .menu
+                position: fixed
+                right: 0
+                height: 14vh
+                width: 50vw
+                display: flex
+                justify-content: space-evenly
+
+                @media (max-width: 770px)
+                    display: none
+
+                a
+                    margin: 10px
+                    color: #fff
+                    text-decoration: none
+                    top: 24px
+                    font-size: 1.3rem
+                    align-self: center
+
+                    &:hover, &.active
+                        color: $first-color
+                    
+                    &::after
+                        content: " "
+                        border-bottom-style: solid
+                        border-bottom-width: 2px
+                        display: block
+                        width: 0
+                        border-bottom-color: $first-color
+                        transition: width .35s linear                      
+
+                    &.active::after
+                        width: 100%
+
+            .mobile-menu 
+                display: none
+
+                @media (max-width: 770px)
+                    display: block
+
+                    i.fa-bars
+                        position: fixed
+                        right: 0
+                        color: #fff
+                        font-size: 40px
+                        cursor: pointer
+                        padding-top: 4vh
+                        padding-right: 20px
+
+                        @media (max-width: 770px) and (orientation: landscape)                            
+                            font-size: 28px
+             
+                i.hidden
+                    display: none
+
+                a
+                    display: none
+
+            .navigation.open
+                position: absolute
+                background-color: $first-color
+                right: 0
+                top: 0
+                height: 70vh
+                width: 70vw
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                z-index: 3
+                border: black solid 1px
+
+                @media (max-width: 770px) and (orientation: landscape)
+                    height: 95vh
+
+                a
+                    display: block
+                    text-decoration: none
+                    color: #000
+                    padding: 20px
+                    font-size: 2rem
+
+                    @media (max-width: 770px) and (orientation: landscape)
+                        font-size: 1.4rem
+                    
+                    &:hover
+                        background-color: $second-color
+                        color: #fff
+ 
+                i
+                    align-self: flex-end
+                    color: #000
+                    padding-top: 2.5vh
+                    padding-right: 40px
+                    cursor: pointer
+                    font-size: 40px  
+
+        .logo 
+            height: 14vh
+            position: absolute
+
+    main
+        margin-bottom: 60px
+            
+        .text-box
+            box-sizing: content-box
+            display: flex
+            justify-content: space-evenly
+            margin: 7vh auto
+            position: relative
+
+            p 
+                width: 50vw
+                text-align: justify
+                letter-spacing: 1px
+                font-size: 18px
+                line-height: 40px
+                position: relative
+                
+                @media (max-width: 770px)
+                    width: 80vw
+
+            img
+                @media (max-width: 770px)
+                    position: fixed
+                    left: 0
+                    top: 14vh
+                    width: 100%
+                    height: auto
+                    opacity: 0.3
+                    z-index: -1
+
+                    @media (max-width: 770px) and (orientation: landscape)
+                        left: auto
+                        top: -14vh
+                        width: 70%
+
+        .free-time 
+            position: relative
+            padding: 7vh 0
+            background-color: $first-color
+
+            h3 
+                text-align: center
+                margin-bottom: 25px
+
+            .icon-box 
+                display: flex
+                flex-flow: row wrap
+                max-width: 80vw
+                margin: 0 auto
+
+                div 
+                    flex-grow: 1
+                    display: flex
+                    flex-direction: column
+                    
+                    i 
+                        font-size: 50px
+                        margin: 10px
+                        position: relative
+                        align-self: center
+
+                        .rotate 
+                            transform: rotate(90deg)
+
+                    p
+                        text-align: center
+                        margin: 10px
+
+        #my-skills
+            background-color: $first-color
+            padding: 30px 0
+
+            h1
+                text-align: center
+            
+            .skills-box
+                display: flex
+                flex-flow: row wrap
+                justify-content: space-evenly
+                max-width: 80vw
+                margin: 20px auto
+
+                div
+                    flex-basis: 10vw
+                    display: flex
+                    flex-direction: column
+                    margin: 20px
+                    border: 1px solid black
+                    border-radius: 12px
+                    padding: 10px
+
+                    i 
+                        font-size: 50px
+                        align-self: center
+                        margin: 10px
+
+                    span
+                        text-align: center
+
+        .contact-box
+            display: flex
+            flex-flow: column no-wrap
+            justify-content: space-evenly
+            background-color: $first-color
+            padding: 8vh 0
+
+            @media (max-width: 770px)
+                height: 50vh
+            
+            div
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+                z-index: 2
+                
+                a
+                    color: #000
+
+            .img-box 
+                @media (max-width: 770px)
+                    position: absolute
+                    left: auto
+                    top: 14vh
+                    width: 60vw
+                    height: 50vh
+                    opacity: 0.3
+                    z-index: 1
+                    
+                    img
+                        width: 80%
+                        height: auto
+                        position: fixed
+                        top: 14vh
+                        left: auto
+
+                        @media (max-width: 770px) and (orientation: landscape)
+                            width: 40%
+                            position: absolute
+                            top: 4vh
+    
+        .project-list
+            display: flex
+            justify-content: space-evenly
+            padding: 5vh 0
+            flex-wrap: wrap
+
+            .project-box
+                width: 300px
+                height: 300px
+                border: 2px solid black
+                border-radius: 12px
+                overflow: hidden
+                
+            p
+                text-align: center
+                padding: 15px
+                
+            .div-soon
+                display: flex
+                width: 30%
+
+                @media (max-width: 770px)
+                    width: 87%
+                
+                p 
+                    align-self: flex-end
+
+        .checkCV
+            text-align: center
+            
+            a
+                text-decoration: none
+                color: #000
+
+                &:hover
+                    text-decoration: underline
+
+    .memory-game                
+        background-color: lightgrey
+        height: 100vh
+        width: 100%
+        position: absolute
+        top: 5vh
+        left: 0
+
+        &__btn
+            position: absolute
+            top: 11vh
+            left: 25vw
+            transform: translateX(-50%)
+            padding: 5px
+            background-color: $first-color
+            border: 1px solid $second-color
+            border-radius: 7px
+            font-size: 18px
+            cursor: pointer
+            letter-spacing: 1px
+
+            &:hover
+                background-color: $second-color
+                color: #fff
+
+            @media (max-width: 770px)
+                font-size: 0.8rem
+
+        span
+            position: absolute
+            top: 11vh
+            left: 75vw
+            transform: translateX(-50%)
+            font-size: 1.12rem
+            cursor: pointer
+            letter-spacing: 1px
+            padding: 5px
+
+            @media (max-width: 770px)
+                width: 35%
+
+            a
+                color: #000000
+                text-decoration: none
+
+                &:hover
+                    text-decoration: underline 
+
+                @media (max-width: 770px)
+                    font-size: 0.8rem
+    
+        .game-board
+            height: 65vh
+            width: 45vw
+            background-color: lightgrey
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            display: flex
+            flex-flow: row wrap
+
+            @media (max-width: 1550px)
+                width: 55vw
+            
+            @media (max-width: 1250px)
+                width: 63vw
+
+            @media (max-width: 1100px)
+                width: 77vw
+
+            @media (max-width: 900px)
+                width: 90vw
+
+            @media (max-width: 770px)
+                width: 65vw
+            
+            @media (max-width: 570px)
+                width: 86vw
+
+            &__block
+                margin: 3px
+                flex-basis: 19vh
+                box-sizing: border-box
+                cursor: pointer
+
+                &:hover
+                    background-color: rgba(147, 112, 219, 0.1)
+
+            .red 
+                background-color: red
+
+            .blue 
+                background-color: blue
+
+            .green 
+                background-color: green
+
+            .black 
+                background-color: black
+
+            .white 
+                background-color: white
+
+            .yellow 
+                background-color: yellow
+
+            .orange 
+                background-color: orange
+
+            .pink
+                background-color: pink
+            
+            .hidden 
+                background-color: grey
+                
+            .off
+                background-color: silver
+                cursor: default 
+
+    footer 
+        background-color: $second-color
+        height: 60px
+        width: 100%
+        color: #fff
+        position: fixed
+        bottom: 0
+        z-index: 1
+        
+        p 
+            text-align: center
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            
+            a
+                text-decoration: none
+                color: #fff
+                font-size: 11px
+
+    #my-skills
+        margin: 30px
+
+        .skills-box 
+            display: flex
+            flex-flow: wrap row
+            max-width: 70vw
+            margin-left: 15vw
+
+            div 
+                height: 100px
+                width: 100px
+                border: 1px black solid
+                border-radius: 10%
+                margin: 10px
+                display: flex
+                flex-flow: nowrap column
+
+                i 
+                    font-size: 25px
+                    justify-content: center
+                    flex-grow: 1
+                    display: flex
+                    padding-top: 20px
+
+                    img 
+                        height: 25px
+
+                span 
+                    justify-content: center
+                    flex-grow: 1
+                    display: flex
+
+    #contact-form
+        margin: 30px
+
+    .list
+        margin: 30px

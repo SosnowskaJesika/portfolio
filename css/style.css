@@ -1,0 +1,711 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, serif;
+}
+
+body header {
+  background-color: #465973;
+  height: 14vh;
+  position: relative;
+  z-index: 3;
+}
+
+body header nav {
+  position: fixed;
+  width: 100vw;
+  background-color: #465973b5;
+}
+
+body header nav .menu {
+  position: fixed;
+  right: 0;
+  height: 14vh;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 770px) {
+  body header nav .menu {
+    display: none;
+  }
+}
+
+body header nav .menu a {
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  top: 24px;
+  font-size: 1.3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header nav .menu a:hover, body header nav .menu a.active {
+  color: #F1E6E7;
+}
+
+body header nav .menu a::after {
+  content: " ";
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: block;
+  width: 0;
+  border-bottom-color: #F1E6E7;
+  -webkit-transition: width .35s linear;
+  transition: width .35s linear;
+}
+
+body header nav .menu a.active::after {
+  width: 100%;
+}
+
+body header nav .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  body header nav .mobile-menu {
+    display: block;
+  }
+  body header nav .mobile-menu i.fa-bars {
+    position: fixed;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    padding-top: 4vh;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 770px) and (max-width: 770px) and (orientation: landscape) {
+  body header nav .mobile-menu i.fa-bars {
+    font-size: 28px;
+  }
+}
+
+body header nav .mobile-menu i.hidden {
+  display: none;
+}
+
+body header nav .mobile-menu a {
+  display: none;
+}
+
+body header nav .navigation.open {
+  position: absolute;
+  background-color: #F1E6E7;
+  right: 0;
+  top: 0;
+  height: 70vh;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 3;
+  border: black solid 1px;
+}
+
+@media (max-width: 770px) and (orientation: landscape) {
+  body header nav .navigation.open {
+    height: 95vh;
+  }
+}
+
+body header nav .navigation.open a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+@media (max-width: 770px) and (orientation: landscape) {
+  body header nav .navigation.open a {
+    font-size: 1.4rem;
+  }
+}
+
+body header nav .navigation.open a:hover {
+  background-color: #465973;
+  color: #fff;
+}
+
+body header nav .navigation.open i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #000;
+  padding-top: 2.5vh;
+  padding-right: 40px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+body header .logo {
+  height: 14vh;
+  position: absolute;
+}
+
+body main {
+  margin-bottom: 60px;
+}
+
+body main .text-box {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 7vh auto;
+  position: relative;
+}
+
+body main .text-box p {
+  width: 50vw;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 40px;
+  position: relative;
+}
+
+@media (max-width: 770px) {
+  body main .text-box p {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 770px) {
+  body main .text-box img {
+    position: fixed;
+    left: 0;
+    top: 14vh;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 770px) and (max-width: 770px) and (orientation: landscape) {
+  body main .text-box img {
+    left: auto;
+    top: -14vh;
+    width: 70%;
+  }
+}
+
+body main .free-time {
+  position: relative;
+  padding: 7vh 0;
+  background-color: #F1E6E7;
+}
+
+body main .free-time h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+body main .free-time .icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+body main .free-time .icon-box div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .free-time .icon-box div i {
+  font-size: 50px;
+  margin: 10px;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body main .free-time .icon-box div i .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body main .free-time .icon-box div p {
+  text-align: center;
+  margin: 10px;
+}
+
+body main #my-skills {
+  background-color: #F1E6E7;
+  padding: 30px 0;
+}
+
+body main #my-skills h1 {
+  text-align: center;
+}
+
+body main #my-skills .skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 80vw;
+  margin: 20px auto;
+}
+
+body main #my-skills .skills-box div {
+  -ms-flex-preferred-size: 10vw;
+      flex-basis: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+body main #my-skills .skills-box div i {
+  font-size: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 10px;
+}
+
+body main #my-skills .skills-box div span {
+  text-align: center;
+}
+
+body main .contact-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column no-wrap;
+          flex-flow: column no-wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #F1E6E7;
+  padding: 8vh 0;
+}
+
+@media (max-width: 770px) {
+  body main .contact-box {
+    height: 50vh;
+  }
+}
+
+body main .contact-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  z-index: 2;
+}
+
+body main .contact-box div a {
+  color: #000;
+}
+
+@media (max-width: 770px) {
+  body main .contact-box .img-box {
+    position: absolute;
+    left: auto;
+    top: 14vh;
+    width: 60vw;
+    height: 50vh;
+    opacity: 0.3;
+    z-index: 1;
+  }
+  body main .contact-box .img-box img {
+    width: 80%;
+    height: auto;
+    position: fixed;
+    top: 14vh;
+    left: auto;
+  }
+}
+
+@media (max-width: 770px) and (max-width: 770px) and (orientation: landscape) {
+  body main .contact-box .img-box img {
+    width: 40%;
+    position: absolute;
+    top: 4vh;
+  }
+}
+
+body main .project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5vh 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .project-list .project-box {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body main .project-list p {
+  text-align: center;
+  padding: 15px;
+}
+
+body main .project-list .div-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+@media (max-width: 770px) {
+  body main .project-list .div-soon {
+    width: 87%;
+  }
+}
+
+body main .project-list .div-soon p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main .checkCV {
+  text-align: center;
+}
+
+body main .checkCV a {
+  text-decoration: none;
+  color: #000;
+}
+
+body main .checkCV a:hover {
+  text-decoration: underline;
+}
+
+body .memory-game {
+  background-color: lightgrey;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+}
+
+body .memory-game__btn {
+  position: absolute;
+  top: 11vh;
+  left: 25vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 5px;
+  background-color: #F1E6E7;
+  border: 1px solid #465973;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+body .memory-game__btn:hover {
+  background-color: #465973;
+  color: #fff;
+}
+
+@media (max-width: 770px) {
+  body .memory-game__btn {
+    font-size: 0.8rem;
+  }
+}
+
+body .memory-game span {
+  position: absolute;
+  top: 11vh;
+  left: 75vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.12rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+@media (max-width: 770px) {
+  body .memory-game span {
+    width: 35%;
+  }
+}
+
+body .memory-game span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+body .memory-game span a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 770px) {
+  body .memory-game span a {
+    font-size: 0.8rem;
+  }
+}
+
+body .memory-game .game-board {
+  height: 65vh;
+  width: 45vw;
+  background-color: lightgrey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media (max-width: 1550px) {
+  body .memory-game .game-board {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1250px) {
+  body .memory-game .game-board {
+    width: 63vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  body .memory-game .game-board {
+    width: 77vw;
+  }
+}
+
+@media (max-width: 900px) {
+  body .memory-game .game-board {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 770px) {
+  body .memory-game .game-board {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 570px) {
+  body .memory-game .game-board {
+    width: 86vw;
+  }
+}
+
+body .memory-game .game-board__block {
+  margin: 3px;
+  -ms-flex-preferred-size: 19vh;
+      flex-basis: 19vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+body .memory-game .game-board__block:hover {
+  background-color: rgba(147, 112, 219, 0.1);
+}
+
+body .memory-game .game-board .red {
+  background-color: red;
+}
+
+body .memory-game .game-board .blue {
+  background-color: blue;
+}
+
+body .memory-game .game-board .green {
+  background-color: green;
+}
+
+body .memory-game .game-board .black {
+  background-color: black;
+}
+
+body .memory-game .game-board .white {
+  background-color: white;
+}
+
+body .memory-game .game-board .yellow {
+  background-color: yellow;
+}
+
+body .memory-game .game-board .orange {
+  background-color: orange;
+}
+
+body .memory-game .game-board .pink {
+  background-color: pink;
+}
+
+body .memory-game .game-board .hidden {
+  background-color: grey;
+}
+
+body .memory-game .game-board .off {
+  background-color: silver;
+  cursor: default;
+}
+
+body footer {
+  background-color: #465973;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+body footer p {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body footer p a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+}
+
+body #my-skills {
+  margin: 30px;
+}
+
+body #my-skills .skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+  max-width: 70vw;
+  margin-left: 15vw;
+}
+
+body #my-skills .skills-box div {
+  height: 100px;
+  width: 100px;
+  border: 1px black solid;
+  border-radius: 10%;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: nowrap column;
+          flex-flow: nowrap column;
+}
+
+body #my-skills .skills-box div i {
+  font-size: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+body #my-skills .skills-box div i img {
+  height: 25px;
+}
+
+body #my-skills .skills-box div span {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #contact-form {
+  margin: 30px;
+}
+
+body .list {
+  margin: 30px;
+}
+/*# sourceMappingURL=style.css.map */

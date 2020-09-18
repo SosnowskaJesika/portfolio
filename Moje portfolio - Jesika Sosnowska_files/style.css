@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, serif;
+}
+
+body {
+  --first-color: #F1E6E7;
+  --second-color: #465973;
+}
+
+body header {
+  background-color: var(--second-color);
+  height: 14vh;
+  position: relative;
+}
+
+body header nav {
+  position: fixed;
+  width: 100vw;
+  background-color: #465973b5;
+}
+
+body header nav .menu {
+  position: fixed;
+  right: 0;
+  height: 14vh;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 770px) {
+  body header nav .menu {
+    display: none;
+  }
+}
+
+body header nav .menu a {
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  top: 24px;
+  font-size: 1.3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header nav .menu a:hover {
+  color: var(--first-color);
+}
+
+body header nav .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  body header nav .mobile-menu {
+    display: block;
+    position: fixed;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    padding-top: 14vh;
+    padding-right: 20px;
+  }
+  body header nav .mobile-menu.active {
+    display: none;
+  }
+}
+
+body header nav .mobile-menu a {
+  display: none;
+}
+
+body header nav .navigation.open {
+  position: absolute;
+  background-color: red;
+  right: 0;
+  top: 0;
+  height: 75vh;
+  width: 75vw;
+}
+
+body header nav .navigation.open a {
+  display: block;
+  line-height: calc(70vh/5);
+  text-decoration: none;
+  color: black;
+}
+
+body header .logo {
+  height: 14vh;
+  position: absolute;
+}
+
+body main {
+  margin-bottom: 60px;
+}
+
+body main .textBox {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 7vh auto;
+}
+
+body main .textBox p {
+  position: relative;
+  width: 50vw;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+body main .freeTime {
+  position: relative;
+  padding: 7vh 0;
+  background-color: var(--first-color);
+}
+
+body main .freeTime h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+body main .freeTime .iconBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+body main .freeTime .iconBox div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .freeTime .iconBox div i {
+  font-size: 50px;
+  margin: 10px;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body main .freeTime .iconBox div i .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body main .freeTime .iconBox div p {
+  text-align: center;
+  margin: 10px;
+}
+
+body main #my-skills {
+  background-color: var(--first-color);
+  padding: 30px 0;
+}
+
+body main #my-skills h1 {
+  text-align: center;
+}
+
+body main #my-skills .skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 80vw;
+  margin: 20px auto;
+}
+
+body main #my-skills .skills-box div {
+  -ms-flex-preferred-size: 10vw;
+      flex-basis: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+body main #my-skills .skills-box div i {
+  font-size: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 10px;
+}
+
+body main #my-skills .skills-box div span {
+  text-align: center;
+}
+
+body main .contact-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column no-wrap;
+          flex-flow: column no-wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: var(--first-color);
+  padding: 8vh 0;
+}
+
+body main .contact-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .contact-box div a {
+  color: #000;
+}
+
+body main .project-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5vh 0;
+}
+
+body main .project-list .project-box {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body main .project-list p {
+  text-align: center;
+  padding: 15px;
+}
+
+body main .project-list .div-soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+body main .project-list .div-soon p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body footer {
+  background-color: var(--second-color);
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+body footer p {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body footer p a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 11px;
+}
+/*# sourceMappingURL=style.css.map */

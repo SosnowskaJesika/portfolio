@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje portfolio - Jesika Sosnowska</title>
+    <link rel="stylesheet" href="./Moje portfolio - Jesika Sosnowska_files/style.css">
+    <link rel="stylesheet" href="./Moje portfolio - Jesika Sosnowska_files/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <a href="http://127.0.0.1:5500/"><img class="logo" src="./Moje portfolio - Jesika Sosnowska_files/logo_transparent.png"></a>
+        <nav>
+            <div class="menu">
+                <a href="http://127.0.0.1:5500/">Home</a>
+                <!-- <a href="about-me.html">About Me</a> -->
+                <a href="http://127.0.0.1:5500/my-skills.html">Umiejętności</a>
+                <a href="http://127.0.0.1:5500/my-projects.html">Projekty</a>
+                <a href="http://127.0.0.1:5500/contact.html">Kontakt</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars active" style="
+    display: none;
+"></i>
+                <div class="navigation open">
+                    <a href="http://127.0.0.1:5500/">Home</a>
+                    <a href="http://127.0.0.1:5500/my-skills.html">Umiejętności</a>
+                    <a href="http://127.0.0.1:5500/my-projects.html">Projekty</a>
+                    <a href="http://127.0.0.1:5500/contact.html">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="textBox">
+            <p>Witaj na mojej stronie! Nazywam się Jesika Sosnowska i jestem początkującym Front-End Developerem.
+                Mieszkam w
+                Poznaniu i tutaj też studiuję Informatykę na 3. roku w Collegium Da Vinci. Od najmłodszych lat
+                trenowałam
+                różne
+                dyscypliny sportu (głównie jazda konna, koszykówka oraz snowboard), lecz gdy poznałam programowanie od
+                razu wiedziałam, że chcę z nim wiązać przyszłość.
+                W wolnych chwilach lubię
+                uczyć się nowych rzeczy i poszerzam moją wiedzę w zakresie programowania. Poza kodowaniem uwielbiam
+                czytać
+                kryminały, oglądać e-sport oraz grać na PS4.
+            </p>
+            <img src="./Moje portfolio - Jesika Sosnowska_files/avatar-kobieta_318-9840.jpg" alt="" height="280px">
+        </div>
+        <div class="freeTime">
+            <h3>Co robię w wolnym czasie?</h3>
+            <div class="iconBox">
+                <div><i class="fas fa-book"></i>
+                    <p>Czytam książki</p>
+                </div>
+                <div><i class="fas fa-laptop-code"></i>
+                    <p>Uczę się programować</p>
+                </div>
+                <div><i class="fas fa-gamepad"></i>
+                    <p>Gram na konsoli</p>
+                </div>
+                <div><i class="fas fa-running"></i>
+                    <p>Uprawiam sport</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>by Jesika Sosnowska - 2020<br><a href="https://icons8.com/icon/40253/jquery">JQuery icon by Icons8</a>
+        </p>
+    </footer>
+    <script src="./Moje portfolio - Jesika Sosnowska_files/main.js.pobrane"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div class="nsc-content-camera nsc-hide">
+    <div class="nsc-content-camera-buttons" flex="none" layout="row" layout-align="start start">
+        <button class="nsc-content-camera-button nsc-hide" type="button" id="nsc_video_camera_collapse">
+            <span class="nsc-icon nsc-icon-panel-collapse"></span>
+        </button>
+        <button class="nsc-content-camera-button" type="button" id="nsc_video_camera_expand">
+            <span class="nsc-icon nsc-icon-panel-expand"></span>
+        </button>
+        <button class="nsc-content-camera-button" type="button" id="nsc_video_camera_close">
+            <span class="nsc-icon nsc-icon-panel-close"></span>
+        </button>
+    </div>
+    <div class="nsc-content-camera-container">
+        <div class="nsc-content-camera-shadow"></div>
+    </div>
+</div>
+</body></html>
