@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const divMobileNav = document.querySelector('div.navigation');
     const iconBars = document.querySelector('i.fa-bars');
     const iconTimes = document.querySelector('i.fa-times');
+    const mainContainer = document.querySelector('main');
+    const bodyContainer = document.querySelector('body');
 
     const menuLinkHome = document.querySelector('.menu a:nth-child(1)')
     const menuLinkSkills = document.querySelector('.menu a:nth-child(2)')
@@ -73,12 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
         iconBars.classList.add('hidden');
         iconTimes.classList.remove('hidden');
         divMobileNav.classList.add('open');
+        mainContainer.classList.add('blur');
+        bodyContainer.classList.add('open-menu');
     }
 
     const closeMobileMenu = () => {
         iconBars.classList.remove('hidden');
         iconTimes.classList.add('hidden');
         divMobileNav.classList.remove('open');
+        mainContainer.classList.remove('blur');
+        bodyContainer.classList.remove('open-menu');
     }
 
     iconBars.addEventListener('click', openMobileMenu);
