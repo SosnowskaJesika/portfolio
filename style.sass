@@ -96,10 +96,13 @@ body
                 a
                     display: block
                     text-decoration: none
-                    color: #000
+                    color: #484848
                     padding: 0 20px
-                    font-size: 2rem
+                    font-size: 1.75rem
                     line-height: 17.7vh
+                    text-transform: uppercase
+                    font-weight: 600
+                    text-align: center
 
                     @media (max-width: 770px) and (orientation: landscape)
                         font-size: 1.4rem
@@ -291,12 +294,17 @@ body
             .div-soon
                 display: flex
                 width: 30%
+                flex-direction: column
+                justify-content: space-evenly
 
                 @media (max-width: 770px)
                     width: 87%
                 
-                p 
-                    align-self: flex-end
+                div 
+                    display: flex
+
+                    p 
+                        align-items: flex-start
 
         .checkCV
             text-align: center

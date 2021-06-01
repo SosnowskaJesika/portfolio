@@ -128,10 +128,13 @@ body header nav .navigation.open {
 body header nav .navigation.open a {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #484848;
   padding: 0 20px;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 17.7vh;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
 }
 
 @media (max-width: 770px) and (orientation: landscape) {
@@ -428,6 +431,13 @@ body main .project-list .div-soon {
   display: -ms-flexbox;
   display: flex;
   width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 @media (max-width: 770px) {
@@ -436,9 +446,16 @@ body main .project-list .div-soon {
   }
 }
 
-body main .project-list .div-soon p {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+body main .project-list .div-soon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .project-list .div-soon div p {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 body main .checkCV {
